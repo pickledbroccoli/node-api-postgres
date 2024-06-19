@@ -11,3 +11,10 @@ app.use(
     })
 );
 
+app.get('/', (req, res, next) => {
+    res.json({ info: 'Node.js, Express and Postgres API'});
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
+});
