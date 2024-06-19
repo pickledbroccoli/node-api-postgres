@@ -9,7 +9,7 @@ const pool = new Pool({
 // in a real production env this will be in a separate file, unaccessible for version control, because of the sensitive information
 
 /*
-*  Now for the ROUTES :)
+*  Now for the ROUTES :) - helper functions for export ;)
 *
 *  GET: / | displayHome()
 *  GET: /users | getUsers()
@@ -73,3 +73,6 @@ const deleteUser = (req, res) => {
         res.status(204).send(`User with ID: ${id} deleted`);
     });
 };
+
+
+module.exports = { getUsers, getUserById, createUser, updateUser, deleteUser, };
